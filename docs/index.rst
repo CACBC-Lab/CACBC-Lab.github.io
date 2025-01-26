@@ -32,3 +32,4 @@ A comprehensive list of Web site content:
    contact
    tutorials
    reference
+   infraestructure
