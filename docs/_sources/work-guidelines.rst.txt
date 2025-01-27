@@ -1,0 +1,267 @@
+Bioinformatic protocols
+=======================
+.. _basic-command-line-usage:
+
+Basic Linux Command Line Usage
+******************************
+
+Opening a Terminal
+------------------
+1. **Locate the Terminal**: On most Linux distributions, you can find it in your applications menu or taskbar. Alternatively, use the keyboard shortcut ``Ctrl + Alt + T``.
+2. **Check the Prompt**: A typical Linux command line prompt ends with a ``$`` sign for regular users. Once you see this, you’re ready to enter commands.
+
+Essential Commands
+------------------
+Below are common Linux commands you may frequently use, along with brief explanations and example usages:
+
+- **cat**: Displays the contents of a file on the screen.
+
+  .. code-block:: console
+
+     cat filename.txt
+
+- **cp**: Copies a file or directory from one location to another.
+
+  .. code-block:: console
+
+     cp source_file.txt /path/to/destination/
+
+- **chmod**: Changes the permissions of a file or directory.
+
+  .. code-block:: console
+
+     chmod 755 script.sh
+
+- **cut**: Extracts sections (columns) from each line of input.
+
+  .. code-block:: console
+
+     cut -f 1,3 -d ',' data.csv
+
+- **cd**: Changes the current working directory.
+
+  .. code-block:: console
+
+     cd /path/to/directory
+
+- **head**: Displays the first 10 lines of a file by default.
+
+  .. code-block:: console
+
+     head filename.txt
+
+- **less**: Opens a file or stream in a scrollable interface.
+
+  .. code-block:: console
+
+     less largefile.txt
+
+- **ls**: Lists the contents of a directory.
+
+  .. code-block:: console
+
+     ls -l
+
+- **man**: Shows the manual page for a command.
+
+  .. code-block:: console
+
+     man ls
+
+- **mkdir**: Creates a new directory.
+
+  .. code-block:: console
+
+     mkdir new_folder
+
+- **more**: Displays file contents one screen at a time (similar to ``less``, but older).
+
+  .. code-block:: console
+
+     more filename.txt
+
+- **mv**: Moves or renames a file or directory.
+
+  .. code-block:: console
+
+     mv old_name.txt new_name.txt
+
+- **pwd**: Prints the current working directory.
+
+  .. code-block:: console
+
+     pwd
+
+- **rm**: Removes (deletes) files or directories.
+
+  .. code-block:: console
+
+     rm file_to_remove.txt
+     rm -r directory_to_remove
+
+- **touch**: Creates an empty file or updates the timestamp of an existing file.
+
+  .. code-block:: console
+
+     touch newfile.txt
+
+- **wc**: Counts lines, words, and characters in a file.
+
+  .. code-block:: console
+
+     wc filename.txt
+
+- **>** (Redirect operator): Sends standard output to a file (overwrites existing content).
+
+  .. code-block:: console
+
+     echo "Hello" > output.txt
+
+- **<** (Input redirection): Takes standard input from a file.
+
+  .. code-block:: console
+
+     cat < input.txt
+
+- **|** (Pipe): Feeds the output of one command as input to another command.
+
+  .. code-block:: console
+
+     ls -l | grep "txt"
+
+- ***** (Wildcard): Matches one or more characters in filenames.
+
+  .. code-block:: console
+
+     ls *.txt
+
+Conclusion
+----------
+Learning these basic commands and how to open the terminal will help you navigate a Linux system effectively. Feel free to integrate these commands into your daily workflow, especially when working on bioinformatics projects or managing conda environments.
+
+
+.. _conda-environment-setup:
+
+Setting up a Conda Environment
+******************************
+
+In this guide, we explain how to create and manage a new bioinformatic project using **conda** environments on Linux. This approach ensures a stable, reproducible setup for your tools and dependencies.
+
+What is Conda?
+--------------
+Conda is a cross-platform package manager that allows you to create self-contained environments. It helps you keep different versions of software, libraries, and dependencies organized and prevents conflicts.
+
+Prerequisites
+-------------
+1. **Conda Installed**: Make sure you have Anaconda or Miniconda installed on your Linux system. If not, follow the official installation instructions:
+   - Anaconda: https://www.anaconda.com/products/distribution
+   - Miniconda: https://docs.conda.io/en/latest/miniconda.html
+
+   These guides show you how to run the necessary installation commands on Linux.
+
+2. **Terminal Access**: We will be typing commands into a terminal window on Linux.
+
+Creating a New Project Folder
+-----------------------------
+1. Create a new folder (directory) for your bioinformatic project. This folder will hold all the relevant data, scripts, and results.
+
+   .. code-block:: console
+
+      mkdir my_bioinformatics_project
+      cd my_bioinformatics_project
+
+2. Keep your project folder organized by creating subdirectories for data, scripts, and results:
+
+   .. code-block:: console
+
+      mkdir data scripts results
+
+Creating and Activating a Conda Environment
+-------------------------------------------
+1. **Open a terminal** on Linux.
+2. **Create** a new conda environment, specifying a name and any key package(s) you want installed:
+
+   .. code-block:: console
+
+      conda create --name my_bioenv python=3.9
+
+   - ``--name my_bioenv`` sets the name of the environment (change it to something meaningful).
+   - ``python=3.9`` chooses the specific Python version you need.
+
+3. **Activate** the environment:
+
+   .. code-block:: console
+
+      conda activate my_bioenv
+
+   Your prompt should change to show ``(my_bioenv)`` at the beginning, indicating you’re working inside the environment.
+
+Installing Packages
+-------------------
+Within the activated environment, install the bioinformatic or data science packages you need. For example:
+
+.. code-block:: console
+
+   conda install numpy pandas biopython
+
+These packages will be installed **only in the current environment**, keeping your system clean and other environments unaffected.
+
+Using the Environment
+---------------------
+1. **Run Python or other tools** within the environment:
+
+   .. code-block:: console
+
+      python
+
+2. **Install additional packages** at any time:
+
+   .. code-block:: console
+
+      conda install <package-name>
+
+3. **Use specialized channels** like ``bioconda`` if needed:
+
+   .. code-block:: console
+
+      conda install -c bioconda <bioinformatics-package>
+
+Deactivating and Managing Environments
+--------------------------------------
+- **Deactivate** the environment:
+
+  .. code-block:: console
+
+     conda deactivate
+
+- **List** all environments to see what you have:
+
+  .. code-block:: console
+
+     conda env list
+
+- **Remove** an environment when you no longer need it:
+
+  .. code-block:: console
+
+     conda remove --name my_bioenv --all
+
+Best Practices
+--------------
+1. Keep a record of the packages and their versions. You can export the environment to a file:
+
+   .. code-block:: console
+
+      conda env export > my_bioenv.yml
+
+2. Share this file with collaborators or use it to recreate the environment on another machine:
+
+   .. code-block:: console
+
+      conda env create -f my_bioenv.yml
+
+Summary
+-------
+In this guide, we covered the basics of setting up and working within a conda environment for a new bioinformatic project in Linux. This approach helps ensure reproducible research, facilitates collaboration, and prevents conflicts among different dependencies. With these steps, you are ready to begin your projects in a structured, well-organized manner!
+
+
