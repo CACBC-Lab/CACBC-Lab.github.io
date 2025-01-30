@@ -1,5 +1,3 @@
-.. _coc:
-
 Lab Code of Conduct
 ===================
 

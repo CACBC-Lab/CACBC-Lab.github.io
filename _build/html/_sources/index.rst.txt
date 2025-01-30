@@ -3,9 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to CACBC-Lab
-====================================
+Welcome to the Center of Anatomy and Cell Biology Computing Laboratory (CACBC-Lab) at MUW
+=========================================================================================
 
+This is the frontend of the website: <What we are/we do?>
 .. This is the frontend of the website. Write what is this and main topics.
 
 The lab mailing address is::
@@ -28,8 +29,8 @@ A comprehensive list of Web site content:
    :maxdepth: 2
    :caption: Contents:
 
+   infraestructure
+   testing
+   tutorials
    coc
    contact
-   tutorials
-   reference
-   infraestructure

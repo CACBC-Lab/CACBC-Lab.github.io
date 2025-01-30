@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Lab Testing</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Tutorials" href="tutorials.html" />
+  <link rel="prev" title="Computational Infraestructure" href="infraestructure.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">CACBC-Lab</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-the-center-of-anatomy-and-cell-biology-computing-laboratory-cacbc-lab-at-muw">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="infraestructure.html" class="reference internal ">Computational Infraestructure</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Lab Testing</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#basic-program-testing" class="reference internal">Basic Program Testing</a></li>
+                
+                  <li class="toctree-l2"><a href="#conda-environment-and-viennarna-testing" class="reference internal">Conda Environment and ViennaRNA Testing</a></li>
+                
+                  <li class="toctree-l2"><a href="#r-configuration-in-visual-studio-code" class="reference internal">R Configuration in Visual Studio Code</a></li>
+                
+                  <li class="toctree-l2"><a href="#installing-rstudio-in-a-conda-environment" class="reference internal">Installing RStudio in a Conda Environment</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="tutorials.html" class="reference internal ">Tutorials</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="coc.html" class="reference internal ">Lab Code of Conduct</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="contact.html" class="reference internal ">Contacting or joining</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Lab Testing</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="infraestructure.html"
+       title="previous chapter">← Computational Infraestructure</a>
+  </li>
+  <li class="next">
+    <a href="tutorials.html"
+       title="next chapter">Tutorials →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="lab-testing">
+<h1>Lab Testing<a class="headerlink" href="#lab-testing" title="Link to this heading">¶</a></h1>
+<p>Multiple test on CACBC-Lab’ machines</p>
+<section id="basic-program-testing">
+<h2>Basic Program Testing<a class="headerlink" href="#basic-program-testing" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Open basic programs</strong> and ensure they launch without issues:
+- Click on the application menu or press the shortcut keys.
+- Search for each of the following programs: Firefox, Terminal, Inkscape, and R.
+- Click on each program to open it.
+- Verify that each program starts successfully without errors.
+- Close each program after confirming it works.</p></li>
+</ol>
+<section id="user-folder-testing">
+<h3>User Folder Testing<a class="headerlink" href="#user-folder-testing" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p><strong>Open Terminal and navigate to the user folder:</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Ctrl + Alt + T  # Open the terminal</span>
+<span class="go">cd ~            # Move to the home directory</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Create a new folder:</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir test_folder  # Create a new folder</span>
+<span class="go">ls                # Verify the folder was created</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Delete files:</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">touch test_file.txt  # Create a test file</span>
+<span class="go">rm test_file.txt     # Remove the file</span>
+<span class="go">ls                   # Confirm deletion</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If <cite>rm</cite> does not work due to permission issues, try using:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo rm test_file.txt</span>
+</pre></div>
+</div>
+</div>
+<ol class="arabic" start="4">
+<li><p><strong>Modify files using VSCode:</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">code .  # Open VSCode</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Create a new file, write some text, save the file, and close VSCode.</p></li>
+</ul>
+</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If VSCode is not installed, install it using:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo snap install code --classic</span>
+</pre></div>
+</div>
+</div>
+<ol class="arabic" start="5">
+<li><p><strong>Test file permissions:</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">touch restricted_file.txt      # Create a test file</span>
+<span class="go">chmod 600 restricted_file.txt  # Restrict access</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Switch to another user and try to modify or delete the file.</p></li>
+<li><p>Verify that the file is protected.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="conda-environment-and-viennarna-testing">
+<h2>Conda Environment and ViennaRNA Testing<a class="headerlink" href="#conda-environment-and-viennarna-testing" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p><strong>Create a test Conda environment:</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>Open<span class="w"> </span>the<span class="w"> </span>terminal
+<span class="go">conda create --name test_env -c conda-forge # Create the environment</span>
+<span class="go">conda activate test_env  # Activate the environment</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If Conda is not installed, install Miniconda with:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh</span>
+<span class="go">bash Miniforge3-Linux-x86_64.sh</span>
+</pre></div>
+</div>
+</div>
+<ol class="arabic" start="2">
+<li><p><strong>Install ViennaRNA:</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install -c bioconda viennarna # Install ViennaRNA</span>
+<span class="go">RNAfold --version  # Confirm the installation</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If installation fails, ensure the Bioconda channel is configured:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda config --add channels bioconda</span>
+</pre></div>
+</div>
+</div>
+<ol class="arabic" start="3">
+<li><p><strong>Fold an RNA sequence and calculate MFE using Python:</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python  # Open Python in the terminal</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">RNA</span>
+<span class="n">sequence</span> <span class="o">=</span> <span class="s2">&quot;CUACGGCGCGGCGCCCUUGGCGA&quot;</span>
+<span class="n">mfe_structure</span><span class="p">,</span> <span class="n">mfe</span> <span class="o">=</span> <span class="n">RNA</span><span class="o">.</span><span class="n">fold</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MFE Structure: </span><span class="si">{</span><span class="n">mfe_structure</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MFE Value: </span><span class="si">{</span><span class="n">mfe</span><span class="si">}</span><span class="s2"> kcal/mol&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="r-configuration-in-visual-studio-code">
+<h2>R Configuration in Visual Studio Code<a class="headerlink" href="#r-configuration-in-visual-studio-code" title="Link to this heading">¶</a></h2>
+<p>This tutorial guides you through setting up R in Visual Studio Code (VS Code).</p>
+<section id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong>R Installation</strong>: Ensure R (version 3.4.0 or higher) is installed on your system. You can download it from the <a class="reference external" href="https://cran.r-project.org/">CRAN website</a>.</p></li>
+</ul>
+</section>
+<section id="steps">
+<h3>Steps<a class="headerlink" href="#steps" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p><strong>To install the R extension in VSCode</strong>:</p>
+<ul class="simple">
+<li><p>Click the Extensions tab in the left sidebar, search for R, and click Install.</p></li>
+<li><p>Once it’s installed, you’ll want to set up a few settings to get R set up for your conda environment. Click the gear icon in the R extension pane, and click Extension Settings. Modify the Rpath.</p></li>
+</ul>
+</li>
+<li><p><strong>Install the R Language Server</strong>:</p>
+<ul>
+<li><p>Open your R console.</p></li>
+<li><p>Install the <cite>languageserver</cite> package by running:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;languageserver&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Install the R Extension in VS Code</strong>:</p>
+<ul class="simple">
+<li><p>Navigate to the Extensions view by clicking on the square icon in the sidebar or pressing <cite>Ctrl+Shift+X</cite>.</p></li>
+<li><p>In the search bar, type “R” and select the extension named “R” authored by Yuki Ueda.</p></li>
+<li><p>Click ‘Install’ to add the extension to VS Code.</p></li>
+</ul>
+</li>
+<li><p><strong>Enhance the R experience in VSCode (Optional)</strong>:</p>
+<ul class="simple">
+<li><p><strong>Radian</strong>: A modern R console that offers features like syntax highlighting and auto-completion. Install Radian by running:</p></li>
+</ul>
+<blockquote>
+<div><div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;radian&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>httpgd</strong>: An R package that provides a graphics device serving SVG graphics via HTTP and WebSockets, useful for interactive plot viewing in VS Code. Install httpgd by running:</p></li>
+</ul>
+<blockquote>
+<div><div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;httpgd&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>Running R Code in VS Code</strong>:</p>
+<ul class="simple">
+<li><p>Open or create an R script (<cite>.R</cite> file) in VS Code.</p></li>
+<li><p>To run a line of code, place the cursor on the line and press <cite>Ctrl+Enter</cite>. The code will execute in the integrated R terminal.</p></li>
+<li><p>To run the entire script, press <cite>Ctrl+Shift+S</cite>.</p></li>
+</ul>
+</li>
+<li><p><strong>Additional Features</strong>:</p>
+<ul class="simple">
+<li><p><strong>Code Completion (IntelliSense)</strong>: VS Code provides code suggestions and documentation as you type, enhancing coding efficiency.</p></li>
+<li><p><strong>Linting</strong>: The extension checks your code for potential errors and style issues, helping maintain code quality.</p></li>
+<li><p><strong>Workspace Viewer</strong>: View your R environment, including variables and functions, directly within VS Code.</p></li>
+<li><p><strong>Debugging</strong>: With the R Debugger extension, you can set breakpoints and step through your code to identify issues.</p></li>
+</ul>
+</li>
+</ol>
+<p>For a comprehensive guide and troubleshooting, refer to the <a class="reference external" href="https://code.visualstudio.com/docs/languages/r">official VS Code R documentation</a>.</p>
+</section>
+</section>
+<section id="installing-rstudio-in-a-conda-environment">
+<h2>Installing RStudio in a Conda Environment<a class="headerlink" href="#installing-rstudio-in-a-conda-environment" title="Link to this heading">¶</a></h2>
+<p>This guide describes the steps to install R and RStudio within a Conda environment using <cite>conda-forge</cite>.</p>
+<section id="creating-the-conda-environment">
+<h3>Creating the Conda Environment<a class="headerlink" href="#creating-the-conda-environment" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p><strong>Open a terminal</strong>.</p></li>
+<li><p><strong>Create a new Conda environment</strong> with R and essential packages:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda create --name rstudio_env -c conda-forge r-base r-essentials</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Activate the environment</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda activate rstudio_env</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="installing-rstudio">
+<h3>Installing RStudio<a class="headerlink" href="#installing-rstudio" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p><strong>Install RStudio</strong> from <cite>conda-forge</cite>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install -c conda-forge rstudio</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Verify the installation</strong> by running:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rstudio</span>
+</pre></div>
+</div>
+<p>If RStudio opens without errors, the installation was successful!</p>
+</li>
+</ol>
+</section>
+<section id="installing-additional-r-packages">
+<h3>Installing Additional R Packages<a class="headerlink" href="#installing-additional-r-packages" title="Link to this heading">¶</a></h3>
+<p>To install additional R packages, use R’s built-in <cite>install.packages()</cite> function. Open R within the Conda environment and run:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If package installation fails due to missing system dependencies, try using Conda to install them:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install -c conda-forge r-ggplot2</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="launching-rstudio-from-the-conda-environment">
+<h3>Launching RStudio from the Conda Environment<a class="headerlink" href="#launching-rstudio-from-the-conda-environment" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p><strong>Ensure the Conda environment is active</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda activate rstudio_env</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Launch RStudio</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rstudio</span>
+</pre></div>
+</div>
+<p>The RStudio interface should open with the Conda environment’s R version.</p>
+</li>
+</ol>
+</section>
+<section id="uninstalling-rstudio-and-cleaning-up">
+<h3>Uninstalling RStudio and Cleaning Up<a class="headerlink" href="#uninstalling-rstudio-and-cleaning-up" title="Link to this heading">¶</a></h3>
+<p>If you need to remove RStudio and the Conda environment, follow these steps:</p>
+<ol class="arabic">
+<li><p><strong>Deactivate the environment</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda deactivate</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Remove the Conda environment</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda remove --name rstudio_env --all</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>This ensures a clean removal of all installed packages within the environment.</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="infraestructure.html"
+       title="previous chapter">← Computational Infraestructure</a>
+  </li>
+  <li class="next">
+    <a href="tutorials.html"
+       title="next chapter">Tutorials →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2025, Cristian A. Velandia-Huerto.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.4.7 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>
