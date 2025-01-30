@@ -33,3 +33,4 @@ A comprehensive list of Web site content:
    tutorials
    reference
    infraestructure
+   testing
