@@ -130,7 +130,7 @@ You can search for ``ViennaRNA`` on `Bioconda <https://bioconda.github.io/>`_. J
 
       $ python  # Open Python in the terminal
 
-Type this in the ``python`` terminal:
+Type this in the ``python`` terminal.
 
    .. code-block:: python
 
