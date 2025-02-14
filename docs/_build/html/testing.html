@@ -309,7 +309,7 @@
 </div>
 </li>
 </ol>
-<p>Type this in the <code class="docutils literal notranslate"><span class="pre">python</span></code> terminal.</p>
+<p>Type this in the <code class="docutils literal notranslate"><span class="pre">python</span></code> terminal:</p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">RNA</span>
 <span class="n">sequence</span> <span class="o">=</span> <span class="s2">&quot;CUACGGCGCGGCGCCCUUGGCGA&quot;</span>
@@ -322,25 +322,40 @@
 </section>
 <section id="r-configuration-in-visual-studio-code">
 <h2>R Configuration in Visual Studio Code<a class="headerlink" href="#r-configuration-in-visual-studio-code" title="Link to this heading">¶</a></h2>
-<p>This tutorial guides you through setting up R in Visual Studio Code (VS Code).</p>
+<p>This part guides you through setting up <cite>R</cite> in Visual Studio Code (<cite>VSCode</cite>).</p>
 <section id="prerequisites">
 <h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h3>
-<ul class="simple">
-<li><p><strong>R Installation</strong>: Ensure R (version 3.4.0 or higher) is installed on your system. You can download it from the <a class="reference external" href="https://cran.r-project.org/">CRAN website</a>.</p></li>
+<ul>
+<li><p><strong>R Installation</strong>: Ensure <code class="docutils literal notranslate"><span class="pre">R</span></code> (version 3.4.0 or higher) is installed on your system:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>R<span class="w"> </span><span class="c1"># It will open R in the console</span>
+</pre></div>
+</div>
+</li>
+<li><p>Then, I suggest to use a <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment with custom R version and packages, like this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>r_env<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>r-base<span class="w"> </span><span class="c1"># Dowload latests R version</span>
+</pre></div>
+</div>
+</li>
+<li><p>Then, create a new project and open <code class="docutils literal notranslate"><span class="pre">VSCode</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/srv/&lt;your_machine_name&gt;/&lt;your_username&gt;<span class="w"> </span><span class="c1"># Change to your own folder</span>
+<span class="gp">$ </span>mkdir<span class="w"> </span>projects/testR<span class="w"> </span><span class="c1"># Create a folder to host your new project</span>
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>projects/testR<span class="w"> </span><span class="c1"># Access to the project folder</span>
+<span class="gp">$ </span>code<span class="w"> </span>.<span class="w"> </span><span class="c1"># Open VSCode in the testR folder</span>
+</pre></div>
+</div>
+</li>
 </ul>
-</section>
-<section id="steps">
-<h3>Steps<a class="headerlink" href="#steps" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p><strong>To install the R extension in VSCode</strong>:</p>
 <ul class="simple">
-<li><p>Click the Extensions tab in the left sidebar, search for R, and click Install.</p></li>
-<li><p>Once it’s installed, you’ll want to set up a few settings to get R set up for your conda environment. Click the gear icon in the R extension pane, and click Extension Settings. Modify the Rpath.</p></li>
+<li><p>Navigate to the Extensions view by clicking on the square icon in the sidebar or pressing <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Shift</kbd> + <kbd class="kbd docutils literal notranslate">X</kbd>.</p></li>
+<li><p>In the search bar, type <code class="docutils literal notranslate"><span class="pre">R</span></code> and select the extension it.</p></li>
+<li><p>Click ‘Install’ to add the extension to VS Code.</p></li>
 </ul>
 </li>
 <li><p><strong>Install the R Language Server</strong>:</p>
 <ul>
-<li><p>Open your R console.</p></li>
+<li><p>Open your R console, in <code class="docutils literal notranslate"><span class="pre">VSCode</span></code> go to ::menuselection::<code class="docutils literal notranslate"><span class="pre">View</span></code>, then ::menuselection::<code class="docutils literal notranslate"><span class="pre">Terminal</span></code></p></li>
 <li><p>Install the <cite>languageserver</cite> package by running:</p>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;languageserver&quot;</span><span class="p">)</span>
 </pre></div>
@@ -348,13 +363,8 @@
 </li>
 </ul>
 </li>
-<li><p><strong>Install the R Extension in VS Code</strong>:</p>
-<ul class="simple">
-<li><p>Navigate to the Extensions view by clicking on the square icon in the sidebar or pressing <cite>Ctrl+Shift+X</cite>.</p></li>
-<li><p>In the search bar, type “R” and select the extension named “R” authored by Yuki Ueda.</p></li>
-<li><p>Click ‘Install’ to add the extension to VS Code.</p></li>
-</ul>
-</li>
+</ol>
+<ol class="arabic" start="4">
 <li><p><strong>Enhance the R experience in VSCode (Optional)</strong>:</p>
 <ul class="simple">
 <li><p><strong>Radian</strong>: A modern R console that offers features like syntax highlighting and auto-completion. Install Radian by running:</p></li>
@@ -375,52 +385,70 @@
 </li>
 <li><p><strong>Running R Code in VS Code</strong>:</p>
 <ul class="simple">
-<li><p>Open or create an R script (<cite>.R</cite> file) in VS Code.</p></li>
-<li><p>To run a line of code, place the cursor on the line and press <cite>Ctrl+Enter</cite>. The code will execute in the integrated R terminal.</p></li>
-<li><p>To run the entire script, press <cite>Ctrl+Shift+S</cite>.</p></li>
+<li><p>Create an <code class="docutils literal notranslate"><span class="pre">R</span></code> script (<cite>.R</cite> file) in <code class="docutils literal notranslate"><span class="pre">VSCode</span></code>.</p></li>
+<li><p>Copy and paste the following code:</p></li>
 </ul>
-</li>
-<li><p><strong>Additional Features</strong>:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env Rscript</span>
+
+<span class="c1"># Check if ggplot2 is installed; if not, install it.</span>
+<span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">repos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://cloud.r-project.org&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># Set seed for reproducibility</span>
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span>
+
+<span class="c1"># Create sample data with 100 random points</span>
+<span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span>
+<span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># Create a ggplot scatter plot</span>
+<span class="n">plot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;blue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span>
+<span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Sample Scatter Plot&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;X-axis&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Y-axis&quot;</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme_minimal</span><span class="p">()</span>
+
+<span class="c1"># Display the plot</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">plot</span><span class="p">)</span>
+
+<span class="c1"># Optionally, save the plot to a file (PNG format)</span>
+<span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;scatter_plot.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">plot</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
+</pre></div>
+</div>
 <ul class="simple">
-<li><p><strong>Code Completion (IntelliSense)</strong>: VS Code provides code suggestions and documentation as you type, enhancing coding efficiency.</p></li>
-<li><p><strong>Linting</strong>: The extension checks your code for potential errors and style issues, helping maintain code quality.</p></li>
-<li><p><strong>Workspace Viewer</strong>: View your R environment, including variables and functions, directly within VS Code.</p></li>
-<li><p><strong>Debugging</strong>: With the R Debugger extension, you can set breakpoints and step through your code to identify issues.</p></li>
+<li><p>To run a line of code, place the cursor on the line and press <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Enter</kbd>. The code will execute in the integrated <code class="docutils literal notranslate"><span class="pre">R</span></code> terminal.</p></li>
+<li><p>To run the entire script, press <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Shift</kbd> + <kbd class="kbd docutils literal notranslate">S</kbd>.</p></li>
 </ul>
 </li>
 </ol>
-<p>For a comprehensive guide and troubleshooting, refer to the <a class="reference external" href="https://code.visualstudio.com/docs/languages/r">official VS Code R documentation</a>.</p>
 </section>
 </section>
 <section id="installing-rstudio-in-a-conda-environment">
 <h2>Installing RStudio in a Conda Environment<a class="headerlink" href="#installing-rstudio-in-a-conda-environment" title="Link to this heading">¶</a></h2>
 <p>This guide describes the steps to install R and RStudio within a Conda environment using <cite>conda-forge</cite>.</p>
-<section id="creating-the-conda-environment">
-<h3>Creating the Conda Environment<a class="headerlink" href="#creating-the-conda-environment" title="Link to this heading">¶</a></h3>
+<section id="creating-the-conda-environment-with-rstudio">
+<h3>Creating the Conda Environment with RStudio<a class="headerlink" href="#creating-the-conda-environment-with-rstudio" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p><strong>Open a terminal</strong>.</p></li>
-<li><p><strong>Create a new Conda environment</strong> with R and essential packages:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda create --name rstudio_env -c conda-forge r-base r-essentials</span>
+<li><p><strong>Create a new Conda environment</strong> with <cite>R</cite>, <cite>Rstudio</cite> (now <cite>Posit</cite>), and essential packages:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>rstudio_env<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>r-base<span class="w"> </span>r-essentials<span class="w"> </span>rstudio
 </pre></div>
 </div>
 </li>
 <li><p><strong>Activate the environment</strong>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda activate rstudio_env</span>
-</pre></div>
-</div>
-</li>
-</ol>
-</section>
-<section id="installing-rstudio">
-<h3>Installing RStudio<a class="headerlink" href="#installing-rstudio" title="Link to this heading">¶</a></h3>
-<ol class="arabic">
-<li><p><strong>Install RStudio</strong> from <cite>conda-forge</cite>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install -c conda-forge rstudio</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>activate<span class="w"> </span>rstudio_env
 </pre></div>
 </div>
 </li>
 <li><p><strong>Verify the installation</strong> by running:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rstudio</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>rstudio
 </pre></div>
 </div>
 <p>If RStudio opens without errors, the installation was successful!</p>
@@ -437,7 +465,7 @@
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>If package installation fails due to missing system dependencies, try using Conda to install them:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install -c conda-forge r-ggplot2</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>r-ggplot2
 </pre></div>
 </div>
 </div>
@@ -446,34 +474,17 @@
 <h3>Launching RStudio from the Conda Environment<a class="headerlink" href="#launching-rstudio-from-the-conda-environment" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p><strong>Ensure the Conda environment is active</strong>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda activate rstudio_env</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>activate<span class="w"> </span>rstudio_env
 </pre></div>
 </div>
 </li>
 <li><p><strong>Launch RStudio</strong>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rstudio</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>rstudio
 </pre></div>
 </div>
 <p>The RStudio interface should open with the Conda environment’s R version.</p>
 </li>
 </ol>
-</section>
-<section id="uninstalling-rstudio-and-cleaning-up">
-<h3>Uninstalling RStudio and Cleaning Up<a class="headerlink" href="#uninstalling-rstudio-and-cleaning-up" title="Link to this heading">¶</a></h3>
-<p>If you need to remove RStudio and the Conda environment, follow these steps:</p>
-<ol class="arabic">
-<li><p><strong>Deactivate the environment</strong>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda deactivate</span>
-</pre></div>
-</div>
-</li>
-<li><p><strong>Remove the Conda environment</strong>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda remove --name rstudio_env --all</span>
-</pre></div>
-</div>
-</li>
-</ol>
-<p>This ensures a clean removal of all installed packages within the environment.</p>
 </section>
 </section>
 </section>

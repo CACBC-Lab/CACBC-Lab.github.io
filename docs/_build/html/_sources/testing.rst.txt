@@ -130,7 +130,7 @@ You can search for ``ViennaRNA`` on `Bioconda <https://bioconda.github.io/>`_. J
 
       $ python  # Open Python in the terminal
 
-Type this in the ``python`` terminal.
+Type this in the ``python`` terminal:
 
    .. code-block:: python
 
@@ -144,34 +144,46 @@ Type this in the ``python`` terminal.
 R Configuration in Visual Studio Code
 -------------------------------------
 
-This tutorial guides you through setting up R in Visual Studio Code (VS Code).
+This part guides you through setting up `R` in Visual Studio Code (`VSCode`).
 
 Prerequisites
 ^^^^^^^^^^^^^
-- **R Installation**: Ensure R (version 3.4.0 or higher) is installed on your system. You can download it from the `CRAN website <https://cran.r-project.org/>`_. 
+- **R Installation**: Ensure ``R`` (version 3.4.0 or higher) is installed on your system:
 
-Steps
-^^^^^
+  .. code-block:: console
+
+    $ R # It will open R in the console
+- Then, I suggest to use a ``conda`` environment with custom R version and packages, like this:
+
+  .. code-block:: console
+
+      $ conda create -n r_env -c conda-forge r-base # Dowload latests R version
+
+
+- Then, create a new project and open ``VSCode``:
+
+  .. code-block:: console
+    
+    $ cd /srv/<your_machine_name>/<your_username> # Change to your own folder
+    $ mkdir projects/testR # Create a folder to host your new project
+    $ cd projects/testR # Access to the project folder
+    $ code . # Open VSCode in the testR folder
 
 1. **To install the R extension in VSCode**:
 
-   - Click the Extensions tab in the left sidebar, search for R, and click Install. 
-   - Once it’s installed, you’ll want to set up a few settings to get R set up for your conda environment. Click the gear icon in the R extension pane, and click Extension Settings. Modify the Rpath.
+   - Navigate to the Extensions view by clicking on the square icon in the sidebar or pressing :kbd:`Ctrl` + :kbd:`Shift` + :kbd:`X`.
+   - In the search bar, type ``R`` and select the extension it.
+   - Click 'Install' to add the extension to VS Code.
+   .. - Once it’s installed, you’ll want to set up a few settings to get ``R`` set up for your ``conda`` environment. Click the gear icon in the ``R`` extension pane, and click Extension Settings. Modify the ``Rpath:Linux``.
 
 2. **Install the R Language Server**:
 
-   - Open your R console.
+   - Open your R console, in ``VSCode`` go to ::menuselection::``View``, then ::menuselection::``Terminal``
    - Install the `languageserver` package by running:
 
      .. code-block:: r
 
         install.packages("languageserver")
-
-3. **Install the R Extension in VS Code**:
-
-   - Navigate to the Extensions view by clicking on the square icon in the sidebar or pressing `Ctrl+Shift+X`.
-   - In the search bar, type "R" and select the extension named "R" authored by Yuki Ueda.
-   - Click 'Install' to add the extension to VS Code.
 
 4. **Enhance the R experience in VSCode (Optional)**:
    
@@ -189,53 +201,75 @@ Steps
 
 5. **Running R Code in VS Code**:
 
-   - Open or create an R script (`.R` file) in VS Code.
-   - To run a line of code, place the cursor on the line and press `Ctrl+Enter`. The code will execute in the integrated R terminal.
-   - To run the entire script, press `Ctrl+Shift+S`.
+   - Create an ``R`` script (`.R` file) in ``VSCode``.
+   - Copy and paste the following code:
 
-6. **Additional Features**:
+   .. code-block:: r
 
-   - **Code Completion (IntelliSense)**: VS Code provides code suggestions and documentation as you type, enhancing coding efficiency.
-   - **Linting**: The extension checks your code for potential errors and style issues, helping maintain code quality.
-   - **Workspace Viewer**: View your R environment, including variables and functions, directly within VS Code.
-   - **Debugging**: With the R Debugger extension, you can set breakpoints and step through your code to identify issues.
+        #!/usr/bin/env Rscript
 
-For a comprehensive guide and troubleshooting, refer to the `official VS Code R documentation <https://code.visualstudio.com/docs/languages/r>`_.
+        # Check if ggplot2 is installed; if not, install it.
+        if (!require("ggplot2", quietly = TRUE)) {
+          install.packages("ggplot2", repos = "https://cloud.r-project.org")
+          library(ggplot2)
+        }
+
+        # Set seed for reproducibility
+        set.seed(123)
+
+        # Create sample data with 100 random points
+        data <- data.frame(
+          x = rnorm(100),
+          y = rnorm(100)
+        )
+
+        # Create a ggplot scatter plot
+        plot <- ggplot(data, aes(x = x, y = y)) +
+          geom_point(color = "blue") +
+          labs(
+            title = "Sample Scatter Plot",
+            x = "X-axis",
+            y = "Y-axis"
+          ) +
+          theme_minimal()
+
+        # Display the plot
+        print(plot)
+
+        # Optionally, save the plot to a file (PNG format)
+        ggsave("scatter_plot.png", plot, width = 6, height = 4)
+
+   - To run a line of code, place the cursor on the line and press :kbd:`Ctrl` + :kbd:`Enter`. The code will execute in the integrated ``R`` terminal.
+   - To run the entire script, press :kbd:`Ctrl` + :kbd:`Shift` + :kbd:`S`.
+
+.. For a comprehensive guide and troubleshooting, refer to the `official VS Code R documentation <https://code.visualstudio.com/docs/languages/r>`_.
 
 Installing RStudio in a Conda Environment
 -----------------------------------------
 
 This guide describes the steps to install R and RStudio within a Conda environment using `conda-forge`.
 
-Creating the Conda Environment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Creating the Conda Environment with RStudio
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. **Open a terminal**.
-2. **Create a new Conda environment** with R and essential packages:
+2. **Create a new Conda environment** with `R`, `Rstudio` (now `Posit`), and essential packages:
 
    .. code-block:: console
 
-      conda create --name rstudio_env -c conda-forge r-base r-essentials
+      $ conda create --name rstudio_env -c conda-forge r-base r-essentials rstudio
 
 3. **Activate the environment**:
 
    .. code-block:: console
 
-      conda activate rstudio_env
+      $ conda activate rstudio_env
 
-Installing RStudio
-^^^^^^^^^^^^^^^^^^
-1. **Install RStudio** from `conda-forge`:
+4. **Verify the installation** by running:
 
    .. code-block:: console
 
-      conda install -c conda-forge rstudio
-
-2. **Verify the installation** by running:
-
-   .. code-block:: console
-
-      rstudio
+      $ rstudio
 
    If RStudio opens without errors, the installation was successful!
 
@@ -254,7 +288,7 @@ To install additional R packages, use R’s built-in `install.packages()` functi
 
    .. code-block:: console
 
-      conda install -c conda-forge r-ggplot2
+      $ conda install -c conda-forge r-ggplot2
 
 Launching RStudio from the Conda Environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -263,31 +297,12 @@ Launching RStudio from the Conda Environment
 
    .. code-block:: console
 
-      conda activate rstudio_env
+      $ conda activate rstudio_env
 
 2. **Launch RStudio**:
 
    .. code-block:: console
 
-      rstudio
+      $ rstudio
 
    The RStudio interface should open with the Conda environment’s R version.
-
-Uninstalling RStudio and Cleaning Up
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If you need to remove RStudio and the Conda environment, follow these steps:
-
-1. **Deactivate the environment**:
-
-   .. code-block:: console
-
-      conda deactivate
-
-2. **Remove the Conda environment**:
-
-   .. code-block:: console
-
-      conda remove --name rstudio_env --all
-
-This ensures a clean removal of all installed packages within the environment.
