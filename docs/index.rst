@@ -14,6 +14,7 @@ Division Cell and Developmental Biology <https://anatomie-zellbiologie.meduniwie
    :caption: Contents:
 
    infraestructure
+   documentation
    testing
    tutorials
    coc

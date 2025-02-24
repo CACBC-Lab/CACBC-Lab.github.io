@@ -244,20 +244,20 @@ Prerequisites
 
 .. For a comprehensive guide and troubleshooting, refer to the `official VS Code R documentation <https://code.visualstudio.com/docs/languages/r>`_.
 
-Installing RStudio in a Conda Environment
+Installing ``RStudio`` in a Conda Environment
 -----------------------------------------
 
-This guide describes the steps to install R and RStudio within a Conda environment using `conda-forge`.
+This guide describes the steps to install R and `RStudio` within a Conda environment using `conda-forge`.
 
-Creating the Conda Environment with RStudio
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Creating the Conda Environment with ``RStudio``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. **Open a terminal**.
-2. **Create a new Conda environment** with `R`, `Rstudio` (now `Posit`), and essential packages:
+2. **Create a new Conda environment** with ``R``, ``Rstudio`` (now `Posit`), and essential packages:
 
    .. code-block:: console
 
-      $ conda create --name rstudio_env -c conda-forge r-base r-essentials rstudio
+      $ conda create --name rstudio_env -c conda-forge r-base r-essentials rstudio-desktop
 
 3. **Activate the environment**:
 
@@ -271,7 +271,7 @@ Creating the Conda Environment with RStudio
 
       $ rstudio
 
-   If RStudio opens without errors, the installation was successful!
+   If `RStudio` opens without errors, the installation was successful!
 
 Installing Additional R Packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -305,4 +305,4 @@ Launching RStudio from the Conda Environment
 
       $ rstudio
 
-   The RStudio interface should open with the Conda environment’s R version.
+   The `RStudio` interface should open with the Conda environment’s R version.

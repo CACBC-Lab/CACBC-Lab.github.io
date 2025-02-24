@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Documentation</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+          <link rel="stylesheet" href="_static/css/rtd_sphinx_search.min.css" type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/js/rtd_search_config.js?v=b0596c34"></script>
+        <script src="_static/js/rtd_sphinx_search.min.js?v=5e065386"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Lab Testing" href="testing.html" />
+  <link rel="prev" title="Computational Infraestructure" href="infraestructure.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">CACBC-Lab</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-the-center-of-anatomy-and-cell-biology-computing-laboratory-cacbc-lab-at-muw">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="infraestructure.html" class="reference internal ">Computational Infraestructure</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Documentation</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#credentials-and-access" class="reference internal">Credentials and access</a></li>
+                
+                  <li class="toctree-l2"><a href="#user-s-scratch-folder" class="reference internal">User’s scratch folder</a></li>
+                
+                  <li class="toctree-l2"><a href="#conda-environment-management" class="reference internal">Conda environment management</a></li>
+                
+                  <li class="toctree-l2"><a href="#faqs" class="reference internal">FAQs</a></li>
+                
+                  <li class="toctree-l2"><a href="#where-is-my-external-device-mounted" class="reference internal">Where is my external device mounted?</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="testing.html" class="reference internal ">Lab Testing</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="tutorials.html" class="reference internal ">Tutorials</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="coc.html" class="reference internal ">Lab Code of Conduct</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="contact.html" class="reference internal ">Contacting us</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Documentation</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="infraestructure.html"
+       title="previous chapter">← Computational Infraestructure</a>
+  </li>
+  <li class="next">
+    <a href="testing.html"
+       title="next chapter">Lab Testing →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">¶</a></h1>
+<section id="credentials-and-access">
+<h2>Credentials and access<a class="headerlink" href="#credentials-and-access" title="Link to this heading">¶</a></h2>
+<section id="how-to-change-my-user-password">
+<h3>How to change my user password?<a class="headerlink" href="#how-to-change-my-user-password" title="Link to this heading">¶</a></h3>
+<p>Open a terminal and type the command <code class="docutils literal notranslate"><span class="pre">passwd</span></code>, and follow the instructions. When prompted to enter your current and new password, no characters will appear on the screen while you type (this is normal). Simply type your password and press Enter each time.</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>passwd
+<span class="go">Changing password for username.</span>
+<span class="go">Current password:</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="user-s-scratch-folder">
+<h2>User’s scratch folder<a class="headerlink" href="#user-s-scratch-folder" title="Link to this heading">¶</a></h2>
+<section id="how-do-i-access-my-scratch-folder">
+<h3>How do I access my scratch folder?<a class="headerlink" href="#how-do-i-access-my-scratch-folder" title="Link to this heading">¶</a></h3>
+<p>Your <strong>scratch</strong> folder is named the same as your username and is located at:</p>
+<p><code class="docutils literal notranslate"><span class="pre">/srv/&lt;machine_name&gt;/&lt;your_username&gt;/</span></code></p>
+<p>To access it, follow these steps:</p>
+<ol class="arabic">
+<li><p><strong>Use the `cd` command</strong> to navigate to your scratch directory. Replace <cite>&lt;machine_name&gt;</cite> with the machine’s name and <cite>&lt;your_username&gt;</cite> with your username:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/srv/&lt;machine_name&gt;/&lt;your_username&gt;/
+</pre></div>
+</div>
+</li>
+<li><p>If you encounter a <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">such</span> <span class="pre">file</span> <span class="pre">or</span> <span class="pre">directory</span></code> error, double-check that you have entered the correct machine name and username. If the folder does not exist, you are likely in the wrong location.</p></li>
+</ol>
+</section>
+<section id="how-do-i-create-a-folder-in-my-scratch-folder">
+<h3>How do I create a folder in my scratch folder?<a class="headerlink" href="#how-do-i-create-a-folder-in-my-scratch-folder" title="Link to this heading">¶</a></h3>
+<p>To create a folder inside your <strong>scratch</strong> directory, follow these steps:</p>
+<ol class="arabic">
+<li><p><strong>Navigate to your scratch folder</strong> using the <cite>cd</cite> command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/srv/&lt;machine_name&gt;/&lt;your_username&gt;/
+</pre></div>
+</div>
+</li>
+<li><p><strong>Create a new folder</strong> using the <cite>mkdir</cite> command. Replace <cite>&lt;folder_name&gt;</cite> with your desired folder name:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>&lt;folder_name&gt;
+</pre></div>
+</div>
+</li>
+<li><p>To <strong>verify that the folder was created</strong>, list the contents of the directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-l
+</pre></div>
+</div>
+</li>
+</ol>
+<p>If you see your new folder in the output, the folder was successfully created.</p>
+</section>
+<section id="how-do-i-connect-remotely-to-my-scratch-using-an-unix-machine">
+<h3>How do I connect remotely to my scratch using an Unix machine:<a class="headerlink" href="#how-do-i-connect-remotely-to-my-scratch-using-an-unix-machine" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p>Use the Cisco platform using your MEDUni credentials to use a valid <code class="docutils literal notranslate"><span class="pre">VPN</span></code> connection. Once you are connected, type:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>&lt;user_name&gt;@&lt;ip<span class="w"> </span>address&gt;
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">IP</span></code> address for each machine is specified in this <a class="reference internal" href="infraestructure.html#computational-infraestructure-tab"><span class="std std-ref">table</span></a>.</p>
+</section>
+</section>
+<section id="conda-environment-management">
+<h2>Conda environment management<a class="headerlink" href="#conda-environment-management" title="Link to this heading">¶</a></h2>
+<p>This section provides answers to common questions about managing <strong>conda</strong> environments, including creating, deleting, installing packages, and locating environments.</p>
+<section id="how-do-i-create-and-delete-a-conda-environment">
+<span id="create-delete-conda-env"></span><h3>How do I create and delete a conda environment?<a class="headerlink" href="#how-do-i-create-and-delete-a-conda-environment" title="Link to this heading">¶</a></h3>
+<p><strong>To create a conda environment:</strong></p>
+<ol class="arabic">
+<li><p>Use the following command, replacing <cite>&lt;env_name&gt;</cite> with your desired environment name and <cite>&lt;python_version&gt;</cite> with the required Python version:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>&lt;env_name&gt;<span class="w"> </span><span class="nv">python</span><span class="o">=</span>&lt;python_version&gt;
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>myenv<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+</pre></div>
+</div>
+</li>
+<li><p>Activate the environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>&lt;env_name&gt;
+</pre></div>
+</div>
+</li>
+</ol>
+<p>—</p>
+<p><strong>To delete a conda environment:</strong></p>
+<ol class="arabic">
+<li><p>Deactivate the environment if it’s active:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>deactivate
+</pre></div>
+</div>
+</li>
+<li><p>Use the following command to delete the environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>remove<span class="w"> </span>--name<span class="w"> </span>&lt;env_name&gt;
+</pre></div>
+</div>
+</li>
+</ol>
+<p>—</p>
+</section>
+<section id="how-do-i-install-and-uninstall-packages-in-a-conda-environment">
+<span id="install-uninstall-conda-packages"></span><h3>How do I install and uninstall packages in a conda environment?<a class="headerlink" href="#how-do-i-install-and-uninstall-packages-in-a-conda-environment" title="Link to this heading">¶</a></h3>
+<p><strong>To install a package:</strong></p>
+<ol class="arabic">
+<li><p>Activate the environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>&lt;env_name&gt;
+</pre></div>
+</div>
+</li>
+<li><p>Install the desired package (replace <cite>&lt;package_name&gt;</cite> with the package name):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>&lt;package_name&gt;
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>samtools
+</pre></div>
+</div>
+</li>
+</ol>
+<p>—</p>
+<p><strong>To uninstall a package:</strong></p>
+<ol class="arabic">
+<li><p>Ensure the environment is activated:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>&lt;env_name&gt;
+</pre></div>
+</div>
+</li>
+<li><p>Uninstall the package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>remove<span class="w"> </span>&lt;package_name&gt;
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>remove<span class="w"> </span>samtools
+</pre></div>
+</div>
+</li>
+</ol>
+<p>—</p>
+</section>
+<section id="how-do-i-list-my-conda-environments">
+<span id="list-conda-envs"></span><h3>How do I list my conda environments?<a class="headerlink" href="#how-do-i-list-my-conda-environments" title="Link to this heading">¶</a></h3>
+<p>To list all available conda environments, use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>list
+</pre></div>
+</div>
+<p>Or:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>info<span class="w"> </span>--envs
+</pre></div>
+</div>
+<p>The output will show the names of the environments along with their paths, with the currently active environment marked by an asterisk (*).</p>
+<p>—</p>
+</section>
+<section id="how-do-i-clone-a-conda-environment-and-create-one-from-a-file">
+<h3>How do I clone a conda environment and create one from a file?<a class="headerlink" href="#how-do-i-clone-a-conda-environment-and-create-one-from-a-file" title="Link to this heading">¶</a></h3>
+<p>–
+<strong>Clone an environment</strong></p>
+<p>To create an exact copy of an existing conda environment, use the <cite>conda create</cite> command with the <cite>–clone</cite> option:</p>
+<ol class="arabic">
+<li><p>Use the following command, replacing <cite>&lt;existing_env&gt;</cite> with the name of the environment to clone and <cite>&lt;new_env&gt;</cite> with the name of the new environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>&lt;new_env&gt;<span class="w"> </span>--clone<span class="w"> </span>&lt;existing_env&gt;
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>myenv_clone<span class="w"> </span>--clone<span class="w"> </span>myenv
+</pre></div>
+</div>
+<p>—</p>
+<p><strong>Create a conda environment file</strong></p>
+<p>You can create a conda environment from an <strong>environment file</strong> (typically <cite>environment.yml</cite>) that lists all dependencies and configurations.</p>
+<ol class="arabic">
+<li><p>Ensure you have the <cite>environment.yml</cite> file.</p></li>
+<li><p>Run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>--file<span class="w"> </span>environment.yml
+</pre></div>
+</div>
+</li>
+</ol>
+<p>This will create the environment with the name specified in the <cite>name:</cite> field of the <cite>environment.yml</cite> file.</p>
+<p>—</p>
+<p><strong>Create a conda environment file from existing environment</strong></p>
+<p>To generate an <cite>environment.yml</cite> file from an existing environment (useful for sharing or recreating the environment elsewhere), use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>&lt;env_name&gt;
+$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span><span class="nb">export</span><span class="w"> </span>&gt;<span class="w"> </span>environment.yml
+</pre></div>
+</div>
+<p>This command will save the current environment’s configuration to <cite>environment.yml</cite>.</p>
+<p>—</p>
+<p><strong>Update a conda environment</strong></p>
+<p>If you need to update an existing environment using an updated <cite>environment.yml</cite> file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>update<span class="w"> </span>--file<span class="w"> </span>environment.yml<span class="w"> </span>--prune
+</pre></div>
+</div>
+<p>The <cite>–prune</cite> option removes dependencies no longer required from the environment.</p>
+</section>
+<section id="how-do-i-locate-the-path-of-a-specific-conda-environment">
+<span id="locate-conda-env-path"></span><h3>How do I locate the path of a specific conda environment?<a class="headerlink" href="#how-do-i-locate-the-path-of-a-specific-conda-environment" title="Link to this heading">¶</a></h3>
+<p>To find the path of a particular conda environment, use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>list
+</pre></div>
+</div>
+<p>This will display all environments with their corresponding paths.</p>
+<p>Alternatively, if the environment is active, you can use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="nv">$CONDA_PREFIX</span>
+</pre></div>
+</div>
+<p>This will return the full path to the active environment.</p>
+</section>
+</section>
+<section id="faqs">
+<h2>FAQs<a class="headerlink" href="#faqs" title="Link to this heading">¶</a></h2>
+</section>
+<section id="where-is-my-external-device-mounted">
+<span id="where-is-external-device-mounted"></span><h2>Where is my external device mounted?<a class="headerlink" href="#where-is-my-external-device-mounted" title="Link to this heading">¶</a></h2>
+<p>Your external devices (such as memory sticks or hard disks) are mounted in the following directory:</p>
+<p><code class="docutils literal notranslate"><span class="pre">/run/media/&lt;your_username&gt;/</span></code></p>
+<p>To locate your device:</p>
+<ol class="arabic">
+<li><p><strong>Navigate to the mount directory</strong> using the <cite>cd</cite> command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/run/media/&lt;your_username&gt;/
+</pre></div>
+</div>
+</li>
+<li><p><strong>List the contents</strong> to see the names of the mounted devices:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-l
+</pre></div>
+</div>
+</li>
+</ol>
+<p>You will recognize your device by its name in the list. If you don’t see your device, ensure it is properly connected and mounted.</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="infraestructure.html"
+       title="previous chapter">← Computational Infraestructure</a>
+  </li>
+  <li class="next">
+    <a href="testing.html"
+       title="next chapter">Lab Testing →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2025, Cristian A. Velandia-Huerto.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.4.7 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

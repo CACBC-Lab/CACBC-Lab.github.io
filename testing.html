@@ -8,11 +8,14 @@
     
           <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
           <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+          <link rel="stylesheet" href="_static/css/rtd_sphinx_search.min.css" type="text/css" />
       
       <!-- sphinx script_files -->
         <script src="_static/documentation_options.js?v=2709fde1"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/js/rtd_search_config.js"></script>
+        <script src="_static/js/rtd_sphinx_search.min.js"></script>
 
       
       <!-- bundled in js (rollup iife) -->
@@ -22,7 +25,7 @@
   <link rel="index" title="Index" href="genindex.html" />
   <link rel="search" title="Search" href="search.html" />
   <link rel="next" title="Tutorials" href="tutorials.html" />
-  <link rel="prev" title="Computational Infraestructure" href="infraestructure.html" /> 
+  <link rel="prev" title="Documentation" href="documentation.html" /> 
   </head>
 
   <body>
@@ -76,6 +79,15 @@
           <li class="toctree-l1 ">
             
               <a href="infraestructure.html" class="reference internal ">Computational Infraestructure</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="documentation.html" class="reference internal ">Documentation</a>
             
 
             
@@ -148,8 +160,8 @@
 
   <ul class="page-nav">
   <li class="prev">
-    <a href="infraestructure.html"
-       title="previous chapter">← Computational Infraestructure</a>
+    <a href="documentation.html"
+       title="previous chapter">← Documentation</a>
   </li>
   <li class="next">
     <a href="tutorials.html"
@@ -431,14 +443,14 @@
 </section>
 </section>
 <section id="installing-rstudio-in-a-conda-environment">
-<h2>Installing RStudio in a Conda Environment<a class="headerlink" href="#installing-rstudio-in-a-conda-environment" title="Link to this heading">¶</a></h2>
-<p>This guide describes the steps to install R and RStudio within a Conda environment using <cite>conda-forge</cite>.</p>
+<h2>Installing <code class="docutils literal notranslate"><span class="pre">RStudio</span></code> in a Conda Environment<a class="headerlink" href="#installing-rstudio-in-a-conda-environment" title="Link to this heading">¶</a></h2>
+<p>This guide describes the steps to install R and <cite>RStudio</cite> within a Conda environment using <cite>conda-forge</cite>.</p>
 <section id="creating-the-conda-environment-with-rstudio">
-<h3>Creating the Conda Environment with RStudio<a class="headerlink" href="#creating-the-conda-environment-with-rstudio" title="Link to this heading">¶</a></h3>
+<h3>Creating the Conda Environment with <code class="docutils literal notranslate"><span class="pre">RStudio</span></code><a class="headerlink" href="#creating-the-conda-environment-with-rstudio" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p><strong>Open a terminal</strong>.</p></li>
-<li><p><strong>Create a new Conda environment</strong> with <cite>R</cite>, <cite>Rstudio</cite> (now <cite>Posit</cite>), and essential packages:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>rstudio_env<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>r-base<span class="w"> </span>r-essentials<span class="w"> </span>rstudio
+<li><p><strong>Create a new Conda environment</strong> with <code class="docutils literal notranslate"><span class="pre">R</span></code>, <code class="docutils literal notranslate"><span class="pre">Rstudio</span></code> (now <cite>Posit</cite>), and essential packages:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>rstudio_env<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>r-base<span class="w"> </span>r-essentials<span class="w"> </span>rstudio-desktop
 </pre></div>
 </div>
 </li>
@@ -451,7 +463,7 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>rstudio
 </pre></div>
 </div>
-<p>If RStudio opens without errors, the installation was successful!</p>
+<p>If <cite>RStudio</cite> opens without errors, the installation was successful!</p>
 </li>
 </ol>
 </section>
@@ -482,7 +494,7 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>rstudio
 </pre></div>
 </div>
-<p>The RStudio interface should open with the Conda environment’s R version.</p>
+<p>The <cite>RStudio</cite> interface should open with the Conda environment’s R version.</p>
 </li>
 </ol>
 </section>
@@ -494,8 +506,8 @@
           <div class="page-nav">
             <div class="inner"><ul class="page-nav">
   <li class="prev">
-    <a href="infraestructure.html"
-       title="previous chapter">← Computational Infraestructure</a>
+    <a href="documentation.html"
+       title="previous chapter">← Documentation</a>
   </li>
   <li class="next">
     <a href="tutorials.html"

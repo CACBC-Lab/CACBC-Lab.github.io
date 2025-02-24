@@ -16,6 +16,7 @@ release = '0.1'
 
 extensions = [
         'sphinx.ext.duration',
+        'sphinx_search.extension',
         ]
 
 templates_path = ['_templates']
