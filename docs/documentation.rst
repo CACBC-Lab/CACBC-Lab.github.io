@@ -1,6 +1,61 @@
 Documentation
 =============
 
+How do I start using this lab?
+------------------------------
+Welcome! this section will guide you on basic initial setup to start a new project using our computational environment.
+
+1) To start using the computational environment, you need an ``username`` and ``password``. If required please contact Peter Auriger to get one.
+2) When you have lab credentials, you are assigned to a machine. To see the location of those machines, please go :ref:`here<Computational_Infraestructure_Tab>`.
+3) Star a new session using your credentials:
+
+.. image::
+   Images/start.png
+   :width: 600
+
+4) It will open your session on a Linux Mint distribution, which looks like this:
+
+.. image::
+   Images/cinnamon.png
+   :width: 600
+
+The menu is in the down-left corner, it is the place where you access for all applications. You can type in the search bar ``firefox`` or ``terminal`` to access to the :abbr:`Terminal(Command-line in Linux)`.
+
+5) Open a ``terminal`` window, you will see a window with a command promtp that lools like this:
+
+.. image::
+   Images/linux-terminal.jpg
+   :width: 600
+
+The prompt shows the ``username`` of the current user, followed by the computer’s hostname, and then the current working directory. Finally, the ``$`` symbol indicates that the terminal is ready to accept commands. The terminal interface consists of a command line and a shell. The command line is where you type your commands, while the shell is the program that interprets and executes those commands.
+
+.. https://www.fosslinux.com/103546/the-beginners-guide-to-using-terminal-on-linux-mint.htm
+
+6) Go to your :abbr:`scratch folder (Folder where you will store your data, located in the assigned machine)`, typing:
+
+   .. code-block:: bash
+
+      $ cd /srv/<machine_name>/<your_username>/
+
+Please refer to :ref:`this section <using_scratch>` for more details about your **scratch** folder.
+
+7) You can start creating a project using :ref:`this <create_project>`.
+8) Once you have a project, it makes sense to create its corresponding ``conda`` environment. This will serve to install programs and isolate them from the system. Please refer to :ref:`this section<using_conda>`.
+9) Create a new code using Visual Studio Code (``VSCode``). With this program you are able to write, read, or/and modify text files. At the same time, using extensions, it is able to run ``python`` or ``R`` code, as follows:
+
+    .. code-block:: console
+    
+        $ cd <your project folder> # Access to the project folder
+        $ code . # Open VSCode in the Project folder
+
+``VScode`` looks like this:
+
+.. image::
+   Images/vscode.png
+   :width: 600
+
+10) Please follow this `small tutorial <https://code.visualstudio.com/docs/getstarted/getting-started>`_ to learn how to interact with ``VSCode``. 
+
 Credentials and access
 ----------------------
 
@@ -16,6 +71,8 @@ Open a terminal and type the command ``passwd``, and follow the instructions. Wh
      Current password:
 
 
+.. _using_scratch:
+   
 User's scratch folder
 ---------------------
 
@@ -32,35 +89,58 @@ To access it, follow these steps:
 
    .. code-block:: bash
 
-      cd /srv/<machine_name>/<your_username>/
+      $ cd /srv/<machine_name>/<your_username>/
 
 2. If you encounter a ``No such file or directory`` error, double-check that you have entered the correct machine name and username. If the folder does not exist, you are likely in the wrong location.  
 
 
-How do I create a folder in my scratch folder?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _create_project:
 
-To create a folder inside your **scratch** directory, follow these steps:
+How do I create a project folder in my scratch folder?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To create a project folder inside your **scratch** directory, follow these steps:
 
 1. **Navigate to your scratch folder** using the `cd` command:
 
    .. code-block:: bash
 
-      cd /srv/<machine_name>/<your_username>/
+      $ cd /srv/<machine_name>/<your_username>/
 
 2. **Create a new folder** using the `mkdir` command. Replace `<folder_name>` with your desired folder name:
 
    .. code-block:: bash
 
-      mkdir <folder_name>
+      $ mkdir <folder_name>
+      $ cd <folder_name>
+      $ mkdir code
+      $ mkdir data
+      $ mkdir results
+
+or a one-liner:
+
+    .. code-block:: bash
+
+        $ mkdir -p <folder_name>/{code,data,results} && cd <folder_name>
+
 
 3. To **verify that the folder was created**, list the contents of the directory:
 
    .. code-block:: bash
 
-      ls -l
+      $ ls -l
 
-If you see your new folder in the output, the folder was successfully created.
+or to see the complete structure, like this:
+
+    .. code-block:: bash
+
+        $ tree <folder_name>
+        <folder_name>
+        ├── code
+        ├── data
+        └── results
+
+If you see your new folder in the output or the folder structure as a tree, the project' folder was successfully created.
 
 How do I connect remotely to my scratch using an Unix machine:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -69,9 +149,11 @@ How do I connect remotely to my scratch using an Unix machine:
 
    .. code-block:: bash
 
-      ssh <user_name>@<ip address>
+      $ ssh <user_name>@<ip address>
 
 The ``IP`` address for each machine is specified in this :ref:`table<Computational_Infraestructure_Tab>`.
+
+.. _using_conda:
 
 Conda environment management
 ----------------------------

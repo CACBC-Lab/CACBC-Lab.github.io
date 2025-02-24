@@ -24,7 +24,7 @@
     
   <link rel="index" title="Index" href="genindex.html" />
   <link rel="search" title="Search" href="search.html" />
-  <link rel="next" title="Lab Testing" href="testing.html" />
+  <link rel="next" title="Tutorials" href="tutorials.html" />
   <link rel="prev" title="Computational Infraestructure" href="infraestructure.html" /> 
   </head>
 
@@ -93,6 +93,8 @@
             
               <ul>
                 
+                  <li class="toctree-l2"><a href="#how-do-i-start-using-this-lab" class="reference internal">How do I start using this lab?</a></li>
+                
                   <li class="toctree-l2"><a href="#credentials-and-access" class="reference internal">Credentials and access</a></li>
                 
                   <li class="toctree-l2"><a href="#user-s-scratch-folder" class="reference internal">User’s scratch folder</a></li>
@@ -104,15 +106,6 @@
                   <li class="toctree-l2"><a href="#where-is-my-external-device-mounted" class="reference internal">Where is my external device mounted?</a></li>
                 
               </ul>
-            
-          </li>
-
-        
-          <li class="toctree-l1 ">
-            
-              <a href="testing.html" class="reference internal ">Lab Testing</a>
-            
-
             
           </li>
 
@@ -166,8 +159,8 @@
        title="previous chapter">← Computational Infraestructure</a>
   </li>
   <li class="next">
-    <a href="testing.html"
-       title="next chapter">Lab Testing →</a>
+    <a href="tutorials.html"
+       title="next chapter">Tutorials →</a>
   </li>
 </ul>
   
@@ -177,6 +170,55 @@
             
   <section id="documentation">
 <h1>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">¶</a></h1>
+<section id="how-do-i-start-using-this-lab">
+<h2>How do I start using this lab?<a class="headerlink" href="#how-do-i-start-using-this-lab" title="Link to this heading">¶</a></h2>
+<p>Welcome! this section will guide you on basic initial setup to start a new project using our computational environment.</p>
+<ol class="arabic simple">
+<li><p>To start using the computational environment, you need an <code class="docutils literal notranslate"><span class="pre">username</span></code> and <code class="docutils literal notranslate"><span class="pre">password</span></code>. If required please contact Peter Auriger to get one.</p></li>
+<li><p>When you have lab credentials, you are assigned to a machine. To see the location of those machines, please go <a class="reference internal" href="infraestructure.html#computational-infraestructure-tab"><span class="std std-ref">here</span></a>.</p></li>
+<li><p>Star a new session using your credentials:</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/start.png"><img alt="_images/start.png" src="_images/start.png" style="width: 600px;" />
+</a>
+<ol class="arabic simple" start="4">
+<li><p>It will open your session on a Linux Mint distribution, which looks like this:</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/cinnamon.png"><img alt="_images/cinnamon.png" src="_images/cinnamon.png" style="width: 600px;" />
+</a>
+<p>The menu is in the down-left corner, it is the place where you access for all applications. You can type in the search bar <code class="docutils literal notranslate"><span class="pre">firefox</span></code> or <code class="docutils literal notranslate"><span class="pre">terminal</span></code> to access to the <abbr title="Command-line in Linux">Terminal</abbr>.</p>
+<ol class="arabic simple" start="5">
+<li><p>Open a <code class="docutils literal notranslate"><span class="pre">terminal</span></code> window, you will see a window with a command promtp that lools like this:</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/linux-terminal.jpg"><img alt="_images/linux-terminal.jpg" src="_images/linux-terminal.jpg" style="width: 600px;" />
+</a>
+<p>The prompt shows the <code class="docutils literal notranslate"><span class="pre">username</span></code> of the current user, followed by the computer’s hostname, and then the current working directory. Finally, the <code class="docutils literal notranslate"><span class="pre">$</span></code> symbol indicates that the terminal is ready to accept commands. The terminal interface consists of a command line and a shell. The command line is where you type your commands, while the shell is the program that interprets and executes those commands.</p>
+<ol class="arabic" start="6">
+<li><p>Go to your <abbr title="Folder where you will store your data, located in the assigned machine">scratch folder</abbr>, typing:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/srv/&lt;machine_name&gt;/&lt;your_username&gt;/
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Please refer to <a class="reference internal" href="#using-scratch"><span class="std std-ref">this section</span></a> for more details about your <strong>scratch</strong> folder.</p>
+<ol class="arabic" start="7">
+<li><p>You can start creating a project using <a class="reference internal" href="#create-project"><span class="std std-ref">this</span></a>.</p></li>
+<li><p>Once you have a project, it makes sense to create its corresponding <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment. This will serve to install programs and isolate them from the system. Please refer to <a class="reference internal" href="#using-conda"><span class="std std-ref">this section</span></a>.</p></li>
+<li><p>Create a new code using Visual Studio Code (<code class="docutils literal notranslate"><span class="pre">VSCode</span></code>). With this program you are able to write, read, or/and modify text files. At the same time, using extensions, it is able to run <code class="docutils literal notranslate"><span class="pre">python</span></code> or <code class="docutils literal notranslate"><span class="pre">R</span></code> code, as follows:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>&lt;your<span class="w"> </span>project<span class="w"> </span>folder&gt;<span class="w"> </span><span class="c1"># Access to the project folder</span>
+<span class="gp">$ </span>code<span class="w"> </span>.<span class="w"> </span><span class="c1"># Open VSCode in the Project folder</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">VScode</span></code> looks like this:</p>
+<a class="reference internal image-reference" href="_images/vscode.png"><img alt="_images/vscode.png" src="_images/vscode.png" style="width: 600px;" />
+</a>
+<ol class="arabic simple" start="10">
+<li><p>Please follow this <a class="reference external" href="https://code.visualstudio.com/docs/getstarted/getting-started">small tutorial</a> to learn how to interact with <code class="docutils literal notranslate"><span class="pre">VSCode</span></code>.</p></li>
+</ol>
+</section>
 <section id="credentials-and-access">
 <h2>Credentials and access<a class="headerlink" href="#credentials-and-access" title="Link to this heading">¶</a></h2>
 <section id="how-to-change-my-user-password">
@@ -192,7 +234,7 @@
 </section>
 </section>
 <section id="user-s-scratch-folder">
-<h2>User’s scratch folder<a class="headerlink" href="#user-s-scratch-folder" title="Link to this heading">¶</a></h2>
+<span id="using-scratch"></span><h2>User’s scratch folder<a class="headerlink" href="#user-s-scratch-folder" title="Link to this heading">¶</a></h2>
 <section id="how-do-i-access-my-scratch-folder">
 <h3>How do I access my scratch folder?<a class="headerlink" href="#how-do-i-access-my-scratch-folder" title="Link to this heading">¶</a></h3>
 <p>Your <strong>scratch</strong> folder is named the same as your username and is located at:</p>
@@ -200,41 +242,63 @@
 <p>To access it, follow these steps:</p>
 <ol class="arabic">
 <li><p><strong>Use the `cd` command</strong> to navigate to your scratch directory. Replace <cite>&lt;machine_name&gt;</cite> with the machine’s name and <cite>&lt;your_username&gt;</cite> with your username:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/srv/&lt;machine_name&gt;/&lt;your_username&gt;/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/srv/&lt;machine_name&gt;/&lt;your_username&gt;/
 </pre></div>
 </div>
 </li>
 <li><p>If you encounter a <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">such</span> <span class="pre">file</span> <span class="pre">or</span> <span class="pre">directory</span></code> error, double-check that you have entered the correct machine name and username. If the folder does not exist, you are likely in the wrong location.</p></li>
 </ol>
 </section>
-<section id="how-do-i-create-a-folder-in-my-scratch-folder">
-<h3>How do I create a folder in my scratch folder?<a class="headerlink" href="#how-do-i-create-a-folder-in-my-scratch-folder" title="Link to this heading">¶</a></h3>
-<p>To create a folder inside your <strong>scratch</strong> directory, follow these steps:</p>
+<section id="how-do-i-create-a-project-folder-in-my-scratch-folder">
+<span id="create-project"></span><h3>How do I create a project folder in my scratch folder?<a class="headerlink" href="#how-do-i-create-a-project-folder-in-my-scratch-folder" title="Link to this heading">¶</a></h3>
+<p>To create a project folder inside your <strong>scratch</strong> directory, follow these steps:</p>
 <ol class="arabic">
 <li><p><strong>Navigate to your scratch folder</strong> using the <cite>cd</cite> command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/srv/&lt;machine_name&gt;/&lt;your_username&gt;/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/srv/&lt;machine_name&gt;/&lt;your_username&gt;/
 </pre></div>
 </div>
 </li>
 <li><p><strong>Create a new folder</strong> using the <cite>mkdir</cite> command. Replace <cite>&lt;folder_name&gt;</cite> with your desired folder name:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>&lt;folder_name&gt;
-</pre></div>
-</div>
-</li>
-<li><p>To <strong>verify that the folder was created</strong>, list the contents of the directory:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-l
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mkdir<span class="w"> </span>&lt;folder_name&gt;
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>&lt;folder_name&gt;
+$<span class="w"> </span>mkdir<span class="w"> </span>code
+$<span class="w"> </span>mkdir<span class="w"> </span>data
+$<span class="w"> </span>mkdir<span class="w"> </span>results
 </pre></div>
 </div>
 </li>
 </ol>
-<p>If you see your new folder in the output, the folder was successfully created.</p>
+<p>or a one-liner:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>&lt;folder_name&gt;/<span class="o">{</span>code,data,results<span class="o">}</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>&lt;folder_name&gt;
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic" start="3">
+<li><p>To <strong>verify that the folder was created</strong>, list the contents of the directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ls<span class="w"> </span>-l
+</pre></div>
+</div>
+</li>
+</ol>
+<p>or to see the complete structure, like this:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tree<span class="w"> </span>&lt;folder_name&gt;
+&lt;folder_name&gt;
+├──<span class="w"> </span>code
+├──<span class="w"> </span>data
+└──<span class="w"> </span>results
+</pre></div>
+</div>
+</div></blockquote>
+<p>If you see your new folder in the output or the folder structure as a tree, the project’ folder was successfully created.</p>
 </section>
 <section id="how-do-i-connect-remotely-to-my-scratch-using-an-unix-machine">
 <h3>How do I connect remotely to my scratch using an Unix machine:<a class="headerlink" href="#how-do-i-connect-remotely-to-my-scratch-using-an-unix-machine" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Use the Cisco platform using your MEDUni credentials to use a valid <code class="docutils literal notranslate"><span class="pre">VPN</span></code> connection. Once you are connected, type:</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>&lt;user_name&gt;@&lt;ip<span class="w"> </span>address&gt;
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ssh<span class="w"> </span>&lt;user_name&gt;@&lt;ip<span class="w"> </span>address&gt;
 </pre></div>
 </div>
 </div></blockquote>
@@ -243,7 +307,7 @@
 </section>
 </section>
 <section id="conda-environment-management">
-<h2>Conda environment management<a class="headerlink" href="#conda-environment-management" title="Link to this heading">¶</a></h2>
+<span id="using-conda"></span><h2>Conda environment management<a class="headerlink" href="#conda-environment-management" title="Link to this heading">¶</a></h2>
 <p>This section provides answers to common questions about managing <strong>conda</strong> environments, including creating, deleting, installing packages, and locating environments.</p>
 <section id="how-do-i-create-and-delete-a-conda-environment">
 <span id="create-delete-conda-env"></span><h3>How do I create and delete a conda environment?<a class="headerlink" href="#how-do-i-create-and-delete-a-conda-environment" title="Link to this heading">¶</a></h3>
@@ -423,8 +487,8 @@ $<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span
        title="previous chapter">← Computational Infraestructure</a>
   </li>
   <li class="next">
-    <a href="testing.html"
-       title="next chapter">Lab Testing →</a>
+    <a href="tutorials.html"
+       title="next chapter">Tutorials →</a>
   </li>
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2025, Cristian A. Velandia-Huerto.
