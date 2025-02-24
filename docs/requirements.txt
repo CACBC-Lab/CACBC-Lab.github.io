@@ -1,1 +1,1 @@
-sphinx_search
+readthedocs-sphinx-search
