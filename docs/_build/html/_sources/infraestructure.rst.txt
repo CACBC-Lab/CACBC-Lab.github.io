@@ -43,3 +43,11 @@ There are 2 Lenovo ThinkStations and 2 custom build workstations as follows:
      - AMD/ATI 743f
      - GTX 1650
 
+Users Allocation
+----------------
+
+This diagram shows the available computational resources connected in a network. Each machine has a unique name and is accessible via **SSH** using its IP address. Every machine includes a **scratch** space for local storage on its hard disk, located at the `/srv/<machine_name>/` path. Users have personal scratch directories on assigned machines based on their group association (yellow rectangles). The total number of potential users for each machine is indicated in **red circles**.
+
+.. image:: Images/lab_diagram.jpg
+   :width: 600
+
