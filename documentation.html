@@ -173,34 +173,38 @@
 <section id="how-do-i-start-using-this-lab">
 <h2>How do I start using this lab?<a class="headerlink" href="#how-do-i-start-using-this-lab" title="Link to this heading">¶</a></h2>
 <p>Welcome! this section will guide you on basic initial setup to start a new project using our computational environment.</p>
-<ol class="arabic simple">
-<li><p>To start using the computational environment, you need an <code class="docutils literal notranslate"><span class="pre">username</span></code> and <code class="docutils literal notranslate"><span class="pre">password</span></code>. If required please contact Peter Auriger to get one.</p></li>
+<ol class="arabic">
+<li><p>To start using the computational environment, you need an <code class="docutils literal notranslate"><span class="pre">username</span></code> and <code class="docutils literal notranslate"><span class="pre">password</span></code>. If required please contact <a class="reference internal" href="contact.html#contact-us"><span class="std std-ref">Cristian Velandia</span></a> to get one.</p></li>
 <li><p>When you have lab credentials, you are assigned to a machine. To see the location of those machines, please go <a class="reference internal" href="infraestructure.html#computational-infraestructure-tab"><span class="std std-ref">here</span></a>.</p></li>
-<li><p>Star a new session using your credentials:</p></li>
-</ol>
-<a class="reference internal image-reference" href="_images/start.png"><img alt="_images/start.png" src="_images/start.png" style="width: 600px;" />
+<li><p>Star a new session using your credentials:</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/start.png"><img alt="_images/start.png" src="_images/start.png" style="width: 600px;" />
 </a>
-<ol class="arabic simple" start="4">
-<li><p>It will open your session on a Linux Mint distribution, which looks like this:</p></li>
-</ol>
-<a class="reference internal image-reference" href="_images/cinnamon.png"><img alt="_images/cinnamon.png" src="_images/cinnamon.png" style="width: 600px;" />
+</div></blockquote>
+</li>
+<li><p>It will open your session on a <strong>Linux Mint</strong> distribution, which looks like this:</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/cinnamon.png"><img alt="_images/cinnamon.png" src="_images/cinnamon.png" style="width: 600px;" />
 </a>
+</div></blockquote>
 <p>The menu is in the down-left corner, it is the place where you access for all applications. You can type in the search bar <code class="docutils literal notranslate"><span class="pre">firefox</span></code> or <code class="docutils literal notranslate"><span class="pre">terminal</span></code> to access to the <abbr title="Command-line in Linux">Terminal</abbr>.</p>
-<ol class="arabic simple" start="5">
-<li><p>Open a <code class="docutils literal notranslate"><span class="pre">terminal</span></code> window, you will see a window with a command promtp that lools like this:</p></li>
-</ol>
-<a class="reference internal image-reference" href="_images/linux-terminal.jpg"><img alt="_images/linux-terminal.jpg" src="_images/linux-terminal.jpg" style="width: 600px;" />
+</li>
+<li><p>Open a <code class="docutils literal notranslate"><span class="pre">terminal</span></code> window, you will see a window with a command promtp that lools like this:</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/linux-terminal.jpg"><img alt="_images/linux-terminal.jpg" src="_images/linux-terminal.jpg" style="width: 600px;" />
 </a>
 <p>The prompt shows the <code class="docutils literal notranslate"><span class="pre">username</span></code> of the current user, followed by the computer’s hostname, and then the current working directory. Finally, the <code class="docutils literal notranslate"><span class="pre">$</span></code> symbol indicates that the terminal is ready to accept commands. The terminal interface consists of a command line and a shell. The command line is where you type your commands, while the shell is the program that interprets and executes those commands.</p>
+</div></blockquote>
+</li>
+</ol>
 <ol class="arabic" start="6">
 <li><p>Go to your <abbr title="Folder where you will store your data, located in the assigned machine">scratch folder</abbr>, typing:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/srv/&lt;machine_name&gt;/&lt;your_username&gt;/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/srv/&lt;machine_name&gt;/&lt;your_username&gt;/
+
+Please<span class="w"> </span>refer<span class="w"> </span>to<span class="w"> </span>:ref:<span class="sb">`</span>this<span class="w"> </span>section<span class="w"> </span>&lt;using_scratch&gt;<span class="sb">`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>details<span class="w"> </span>about<span class="w"> </span>your<span class="w"> </span>**scratch**<span class="w"> </span>folder.
 </pre></div>
 </div>
 </li>
-</ol>
-<p>Please refer to <a class="reference internal" href="#using-scratch"><span class="std std-ref">this section</span></a> for more details about your <strong>scratch</strong> folder.</p>
-<ol class="arabic" start="7">
 <li><p>You can start creating a project using <a class="reference internal" href="#create-project"><span class="std std-ref">this</span></a>.</p></li>
 <li><p>Once you have a project, it makes sense to create its corresponding <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment. This will serve to install programs and isolate them from the system. Please refer to <a class="reference internal" href="#using-conda"><span class="std std-ref">this section</span></a>.</p></li>
 <li><p>Create a new code using Visual Studio Code (<code class="docutils literal notranslate"><span class="pre">VSCode</span></code>). With this program you are able to write, read, or/and modify text files. At the same time, using extensions, it is able to run <code class="docutils literal notranslate"><span class="pre">python</span></code> or <code class="docutils literal notranslate"><span class="pre">R</span></code> code, as follows:</p>
@@ -209,13 +213,11 @@
 <span class="gp">$ </span>code<span class="w"> </span>.<span class="w"> </span><span class="c1"># Open VSCode in the Project folder</span>
 </pre></div>
 </div>
-</div></blockquote>
-</li>
-</ol>
 <p><code class="docutils literal notranslate"><span class="pre">VScode</span></code> looks like this:</p>
 <a class="reference internal image-reference" href="_images/vscode.png"><img alt="_images/vscode.png" src="_images/vscode.png" style="width: 600px;" />
 </a>
-<ol class="arabic simple" start="10">
+</div></blockquote>
+</li>
 <li><p>Please follow this <a class="reference external" href="https://code.visualstudio.com/docs/getstarted/getting-started">small tutorial</a> to learn how to interact with <code class="docutils literal notranslate"><span class="pre">VSCode</span></code>.</p></li>
 </ol>
 </section>

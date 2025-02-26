@@ -5,29 +5,29 @@ How do I start using this lab?
 ------------------------------
 Welcome! this section will guide you on basic initial setup to start a new project using our computational environment.
 
-1) To start using the computational environment, you need an ``username`` and ``password``. If required please contact Peter Auriger to get one.
+1) To start using the computational environment, you need an ``username`` and ``password``. If required please contact :ref:`Cristian Velandia<contact_us>` to get one.
 2) When you have lab credentials, you are assigned to a machine. To see the location of those machines, please go :ref:`here<Computational_Infraestructure_Tab>`.
 3) Star a new session using your credentials:
 
-.. image::
-   Images/start.png
-   :width: 600
+    .. image::
+       Images/start.png
+       :width: 600
 
-4) It will open your session on a Linux Mint distribution, which looks like this:
+4) It will open your session on a **Linux Mint** distribution, which looks like this:
 
-.. image::
-   Images/cinnamon.png
-   :width: 600
+    .. image::
+       Images/cinnamon.png
+       :width: 600
 
-The menu is in the down-left corner, it is the place where you access for all applications. You can type in the search bar ``firefox`` or ``terminal`` to access to the :abbr:`Terminal(Command-line in Linux)`.
+   The menu is in the down-left corner, it is the place where you access for all applications. You can type in the search bar ``firefox`` or ``terminal`` to access to the :abbr:`Terminal(Command-line in Linux)`.
 
 5) Open a ``terminal`` window, you will see a window with a command promtp that lools like this:
 
-.. image::
-   Images/linux-terminal.jpg
-   :width: 600
+    .. image::
+       Images/linux-terminal.jpg
+       :width: 600
 
-The prompt shows the ``username`` of the current user, followed by the computer’s hostname, and then the current working directory. Finally, the ``$`` symbol indicates that the terminal is ready to accept commands. The terminal interface consists of a command line and a shell. The command line is where you type your commands, while the shell is the program that interprets and executes those commands.
+    The prompt shows the ``username`` of the current user, followed by the computer’s hostname, and then the current working directory. Finally, the ``$`` symbol indicates that the terminal is ready to accept commands. The terminal interface consists of a command line and a shell. The command line is where you type your commands, while the shell is the program that interprets and executes those commands.
 
 .. https://www.fosslinux.com/103546/the-beginners-guide-to-using-terminal-on-linux-mint.htm
 
@@ -37,7 +37,7 @@ The prompt shows the ``username`` of the current user, followed by the computer�
 
       $ cd /srv/<machine_name>/<your_username>/
 
-Please refer to :ref:`this section <using_scratch>` for more details about your **scratch** folder.
+    Please refer to :ref:`this section <using_scratch>` for more details about your **scratch** folder.
 
 7) You can start creating a project using :ref:`this <create_project>`.
 8) Once you have a project, it makes sense to create its corresponding ``conda`` environment. This will serve to install programs and isolate them from the system. Please refer to :ref:`this section<using_conda>`.
@@ -48,11 +48,11 @@ Please refer to :ref:`this section <using_scratch>` for more details about your 
         $ cd <your project folder> # Access to the project folder
         $ code . # Open VSCode in the Project folder
 
-``VScode`` looks like this:
+    ``VScode`` looks like this:
 
-.. image::
-   Images/vscode.png
-   :width: 600
+    .. image::
+       Images/vscode.png
+       :width: 600
 
 10) Please follow this `small tutorial <https://code.visualstudio.com/docs/getstarted/getting-started>`_ to learn how to interact with ``VSCode``. 
 
