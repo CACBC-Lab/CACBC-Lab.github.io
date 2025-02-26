@@ -37,7 +37,7 @@ Welcome! this section will guide you on basic initial setup to start a new proje
 
       $ cd /srv/<machine_name>/<your_username>/
 
-    Please refer to :ref:`this section <using_scratch>` for more details about your **scratch** folder.
+  Please refer to :ref:`this section <using_scratch>` for more details about your **scratch** folder.
 
 7) You can start creating a project using :ref:`this <create_project>`.
 8) Once you have a project, it makes sense to create its corresponding ``conda`` environment. This will serve to install programs and isolate them from the system. Please refer to :ref:`this section<using_conda>`.
