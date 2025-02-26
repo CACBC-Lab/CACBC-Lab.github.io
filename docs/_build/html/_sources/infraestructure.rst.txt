@@ -1,5 +1,5 @@
 
-Computational Infraestructure
+Computational Infrastructure
 =============================
 
 The CACBC-Lab is equiped with the following computational resources:
