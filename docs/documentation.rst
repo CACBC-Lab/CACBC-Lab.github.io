@@ -381,3 +381,9 @@ To locate your device:
       ls -l
 
 You will recognize your device by its name in the list. If you don’t see your device, ensure it is properly connected and mounted.
+
+Lab Management Documentation
+----------------------------
+
+This is the system adminstration area. Visit the `External Page <https://www.tbi.univie.ac.at/~cavelandiah/CACBC-Lab/protected.html>`_ for more details.
+
