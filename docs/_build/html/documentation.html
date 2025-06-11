@@ -25,7 +25,7 @@
   <link rel="index" title="Index" href="genindex.html" />
   <link rel="search" title="Search" href="search.html" />
   <link rel="next" title="Tutorials" href="tutorials.html" />
-  <link rel="prev" title="Computational Infraestructure" href="infraestructure.html" /> 
+  <link rel="prev" title="Computational Infrastructure" href="infraestructure.html" /> 
   </head>
 
   <body>
@@ -78,7 +78,7 @@
         
           <li class="toctree-l1 ">
             
-              <a href="infraestructure.html" class="reference internal ">Computational Infraestructure</a>
+              <a href="infraestructure.html" class="reference internal ">Computational Infrastructure</a>
             
 
             
@@ -101,9 +101,9 @@
                 
                   <li class="toctree-l2"><a href="#conda-environment-management" class="reference internal">Conda environment management</a></li>
                 
-                  <li class="toctree-l2"><a href="#faqs" class="reference internal">FAQs</a></li>
+                  <li class="toctree-l2"><a href="#using-r" class="reference internal">Using R</a></li>
                 
-                  <li class="toctree-l2"><a href="#where-is-my-external-device-mounted" class="reference internal">Where is my external device mounted?</a></li>
+                  <li class="toctree-l2"><a href="#faqs" class="reference internal">FAQs</a></li>
                 
                   <li class="toctree-l2"><a href="#lab-management-documentation" class="reference internal">Lab Management Documentation</a></li>
                 
@@ -158,7 +158,7 @@
   <ul class="page-nav">
   <li class="prev">
     <a href="infraestructure.html"
-       title="previous chapter">← Computational Infraestructure</a>
+       title="previous chapter">← Computational Infrastructure</a>
   </li>
   <li class="next">
     <a href="tutorials.html"
@@ -461,11 +461,124 @@ $<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span
 <p>This will return the full path to the active environment.</p>
 </section>
 </section>
+<section id="using-r">
+<h2>Using R<a class="headerlink" href="#using-r" title="Link to this heading">¶</a></h2>
+<p>This section provides answers to common questions about managing <strong>R</strong> and its use with Rstudio GUI and Terminal.</p>
+<section id="using-r-in-rstudio">
+<h3>Using R in Rstudio<a class="headerlink" href="#using-r-in-rstudio" title="Link to this heading">¶</a></h3>
+<p>Each user can work with specific <code class="docutils literal notranslate"><span class="pre">R</span></code> versions and packages, isolated from other users and projects, by using <code class="docutils literal notranslate"><span class="pre">conda</span></code> environments.</p>
+<ol class="arabic">
+<li><p>Create or activate a <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment with <code class="docutils literal notranslate"><span class="pre">R</span></code>, <strong>check beforehand which version you want</strong>:</p>
+<p><strong>Option A: Create a new environment</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>&lt;env_name&gt;<span class="w"> </span>r-base<span class="o">=</span><span class="m">4</span>.4.1
+</pre></div>
+</div>
+<p><strong>Option B: Use an existing environment</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>&lt;existing_env&gt;
+conda<span class="w"> </span>install<span class="w"> </span>r-base<span class="o">=</span><span class="m">4</span>.4.1
+</pre></div>
+</div>
+</li>
+<li><p>Launch <code class="docutils literal notranslate"><span class="pre">RStudio</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rstudio<span class="w"> </span><span class="p">&amp;</span>
+</pre></div>
+</div>
+</li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">RStudio</span></code> Console:</p>
+<ul>
+<li><p>Set your working directory to your project folder:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">setwd</span><span class="p">(</span><span class="s">&quot;/path/to/your/project&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Installing <code class="docutils literal notranslate"><span class="pre">R</span></code> packages:</p>
+<ul>
+<li><p><strong>Via Conda</strong> (recomended for system-level consistency):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>r-&lt;package_name&gt;
+</pre></div>
+</div>
+</li>
+<li><p><strong>Via R</strong>:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;&lt;package_name&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Verify that <code class="docutils literal notranslate"><span class="pre">R</span></code> is using your Conda library path:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">.libPaths</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The output should include the <cite>lib/R/library</cite> folder of your active Conda environment.</p>
+</li>
+</ol>
+</section>
+<section id="using-r-in-the-terminal">
+<h3>Using R in the Terminal<a class="headerlink" href="#using-r-in-the-terminal" title="Link to this heading">¶</a></h3>
+<p>You can run <code class="docutils literal notranslate"><span class="pre">R</span></code> directly in your shell, using the same Conda-based isolation for versions and packages.</p>
+<ol class="arabic">
+<li><p>Prepare your Conda environment:</p>
+<p><strong>Option A: Create a new environment</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>&lt;env_name&gt;<span class="w"> </span>r-base<span class="o">=</span><span class="m">4</span>.4.1
+</pre></div>
+</div>
+<p><strong>Option B: Use an existing environment</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>&lt;existing_env&gt;
+conda<span class="w"> </span>install<span class="w"> </span>r-base<span class="o">=</span><span class="m">4</span>.4.1
+</pre></div>
+</div>
+</li>
+<li><p>Change to your project directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/path/to/your/project
+</pre></div>
+</div>
+</li>
+<li><p>Start <cite>R</cite> in the terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>R
+</pre></div>
+</div>
+<p>This will drop you into the R REPL.</p>
+</li>
+<li><p>Within the R REPL:</p>
+<ul>
+<li><p>Confirm or set your working directory:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">getwd</span><span class="p">()</span><span class="w"> </span><span class="c1"># shows current working directory</span>
+<span class="nf">setwd</span><span class="p">(</span><span class="s">&quot;/path/to/your/project&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install packages <strong>via Conda</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>r-&lt;package_name&gt;
+</pre></div>
+</div>
+</li>
+<li><p>Install packages <strong>within R</strong>:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;&lt;package_name&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Verify that R is using the correct library path:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">.libPaths</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The output should include your active Conda environment.</p>
+</li>
+<li><p>Exit R when you’re done:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">q</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
 <section id="faqs">
 <h2>FAQs<a class="headerlink" href="#faqs" title="Link to this heading">¶</a></h2>
-</section>
 <section id="where-is-my-external-device-mounted">
-<span id="where-is-external-device-mounted"></span><h2>Where is my external device mounted?<a class="headerlink" href="#where-is-my-external-device-mounted" title="Link to this heading">¶</a></h2>
+<span id="where-is-external-device-mounted"></span><h3>Where is my external device mounted?<a class="headerlink" href="#where-is-my-external-device-mounted" title="Link to this heading">¶</a></h3>
 <p>Your external devices (such as memory sticks or hard disks) are mounted in the following directory:</p>
 <p><code class="docutils literal notranslate"><span class="pre">/run/media/&lt;your_username&gt;/</span></code></p>
 <p>To locate your device:</p>
@@ -483,6 +596,7 @@ $<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span
 </ol>
 <p>You will recognize your device by its name in the list. If you don’t see your device, ensure it is properly connected and mounted.</p>
 </section>
+</section>
 <section id="lab-management-documentation">
 <h2>Lab Management Documentation<a class="headerlink" href="#lab-management-documentation" title="Link to this heading">¶</a></h2>
 <p>This is the system adminstration area. Visit the <a class="reference external" href="https://www.tbi.univie.ac.at/~cavelandiah/CACBC-Lab/protected.html">External Page</a> for more details.</p>
@@ -495,7 +609,7 @@ $<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span
             <div class="inner"><ul class="page-nav">
   <li class="prev">
     <a href="infraestructure.html"
-       title="previous chapter">← Computational Infraestructure</a>
+       title="previous chapter">← Computational Infrastructure</a>
   </li>
   <li class="next">
     <a href="tutorials.html"

@@ -354,13 +354,143 @@ Alternatively, if the environment is active, you can use:
 
 This will return the full path to the active environment.
 
+Using R
+-------
+This section provides answers to common questions about managing **R** and its use with Rstudio GUI and Terminal.
+
+Using R in Rstudio
+^^^^^^^^^^^^^^^^^^
+
+Each user can work with specific ``R`` versions and packages, isolated from other users and projects, by using ``conda`` environments.
+
+1. Create or activate a ``conda`` environment with ``R``, **check beforehand which version you want**:
+
+   **Option A: Create a new environment**
+
+   .. code-block:: bash
+
+      conda create --name <env_name> r-base=4.4.1
+
+   **Option B: Use an existing environment**
+
+   .. code-block:: bash
+
+      conda activate <existing_env>
+      conda install r-base=4.4.1
+
+2. Launch ``RStudio``:
+
+   .. code-block:: bash
+
+      rstudio &
+
+3. In the ``RStudio`` Console:
+
+   - Set your working directory to your project folder:
+
+     .. code-block:: r
+
+        setwd("/path/to/your/project")
+
+4. Installing ``R`` packages:
+
+   - **Via Conda** (recomended for system-level consistency):
+
+     .. code-block:: bash
+
+        conda install r-<package_name>
+
+   - **Via R**:
+
+     .. code-block:: r
+
+        install.packages("<package_name>")
+
+5. Verify that ``R`` is using your Conda library path:
+
+   .. code-block:: r
+
+      .libPaths()
+
+   The output should include the `lib/R/library` folder of your active Conda environment.
+
+Using R in the Terminal
+^^^^^^^^^^^^^^^^^^^^^^^
+
+You can run ``R`` directly in your shell, using the same Conda-based isolation for versions and packages.
+
+1. Prepare your Conda environment:
+
+   **Option A: Create a new environment**
+
+   .. code-block:: bash
+
+      conda create --name <env_name> r-base=4.4.1
+
+   **Option B: Use an existing environment**
+
+   .. code-block:: bash
+
+      conda activate <existing_env>
+      conda install r-base=4.4.1
+
+2. Change to your project directory:
+
+   .. code-block:: bash
+
+      cd /path/to/your/project
+
+3. Start `R` in the terminal:
+
+   .. code-block:: bash
+
+      R
+
+   This will drop you into the R REPL.
+
+4. Within the R REPL:
+
+   - Confirm or set your working directory:
+
+     .. code-block:: r
+
+        getwd() # shows current working directory
+        setwd("/path/to/your/project")
+
+   - Install packages **via Conda**:
+
+     .. code-block:: bash
+
+        conda install r-<package_name>
+
+   - Install packages **within R**:
+
+     .. code-block:: r
+
+        install.packages("<package_name>")
+
+5. Verify that R is using the correct library path:
+
+   .. code-block:: r
+
+      .libPaths()
+
+   The output should include your active Conda environment.
+
+6. Exit R when you’re done:
+
+   .. code-block:: r
+
+      q()
+
+
 FAQs
 ----
 
 .. _where-is-external-device-mounted:
 
 Where is my external device mounted?
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Your external devices (such as memory sticks or hard disks) are mounted in the following directory:
 
